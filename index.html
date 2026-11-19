@@ -4,12 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="google-site-verification" content="ksBodUpfbVDUmyDkHqPi8kyS4dDVEO9HxJANt_OQoXw" />
-  <meta name="description" content="K Diary는 Google 캘린더 일정을 한눈에 보고 관리할 수 있는 다이어리 앱입니다.">
+  <meta name="description" content="K Diary는 Google 캘린더 일정과 연락처를 개인용 다이어리 앱과 양방향으로 동기화하는 앱입니다.">
   <title>K Diary</title>
   <style>
     body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Malgun Gothic", "Apple SD Gothic Neo", sans-serif; line-height: 1.7; max-width: 800px; margin: 0 auto; padding: 40px 20px 60px; color: #222; }
     header { text-align: center; margin-bottom: 32px; }
-    header img { width: 96px; height: 96px; }
     h1 { font-size: 2.2rem; margin: 12px 0 4px; }
     .tagline { color: #555; font-size: 1.1rem; margin: 0; }
     h2 { font-size: 1.3rem; border-bottom: 1px solid #e5e5e5; padding-bottom: 6px; margin-top: 36px; }
@@ -17,7 +16,8 @@
     table { border-collapse: collapse; width: 100%; font-size: 0.95rem; }
     th, td { border: 1px solid #ddd; padding: 8px 10px; text-align: left; vertical-align: top; }
     th { background: #f0f0f0; }
-    .en { color: #555; font-size: 0.95rem; }
+    code { font-size: 0.85rem; word-break: break-all; }
+    .en { color: #444; font-size: 0.95rem; }
     footer { margin-top: 48px; padding-top: 16px; border-top: 1px solid #e5e5e5; text-align: center; font-size: 0.95rem; color: #666; }
     a { color: #1a5fd0; }
   </style>
@@ -26,31 +26,44 @@
 
   <header>
     <h1>K Diary</h1>
-    <p class="tagline">Google 캘린더 일정을 다이어리처럼 보고 관리하는 앱</p>
+    <p class="tagline">Google 캘린더 일정과 연락처를 내 다이어리와 양방향으로 동기화하는 앱</p>
   </header>
 
   <h2>K Diary 소개</h2>
   <p>
-    <strong>K Diary</strong>는 사용자의 Google 캘린더 일정을 날짜별 다이어리 형태로 보여 주고,
-    앱 안에서 일정을 바로 추가·수정·삭제할 수 있게 해 주는 일정 관리 앱입니다.
+    <strong>K Diary</strong>는 개인용 다이어리 앱입니다. 사용자의 Google 캘린더 일정과 Google 연락처를
+    K Diary와 <strong>양방향으로 동기화</strong>해서, 어느 쪽에서 바꾸든 양쪽이 같은 내용을 유지하도록 해 줍니다.
     K Diary는 Striker Apps가 개발·운영합니다.
   </p>
   <p>이 페이지는 로그인 없이 누구나 볼 수 있는 K Diary의 공식 홈페이지입니다.</p>
 
   <h2>주요 기능</h2>
   <ul>
-    <li>Google 캘린더 일정을 날짜별 다이어리 화면으로 보기</li>
-    <li>앱에서 일정 추가·수정·삭제 (Google 캘린더에 바로 반영)</li>
-    <li>일정에 참석자를 지정할 때 Google 연락처에서 이름·이메일 불러오기</li>
+    <li><strong>일정 동기화:</strong> Google 캘린더 일정을 K Diary에서 날짜별 다이어리로 보고, K Diary에서 추가·수정한 일정은 Google 캘린더에도 반영합니다. Google 캘린더에서 바꾼 내용도 K Diary에 반영됩니다.</li>
+    <li><strong>연락처 동기화:</strong> Google 연락처를 K Diary에서 보고 관리하며, 추가·수정한 내용을 양쪽에 반영합니다.</li>
+    <li><strong>삭제 동기화:</strong> K Diary에서 일정이나 연락처를 삭제하면 Google에서도 해당 항목이 삭제되고, Google에서 삭제한 항목은 K Diary에서도 삭제됩니다.</li>
+    <li><strong>안전장치:</strong> K Diary가 동기화한 적 없는 일정이나 연락처는 수정하거나 삭제하지 않습니다.</li>
   </ul>
 
   <h2>K Diary가 Google 데이터를 사용하는 방법</h2>
-  <p>K Diary는 사용자가 Google 계정으로 로그인하고 직접 허용한 권한만 사용하며, 각 데이터는 아래 목적으로만 사용합니다.</p>
+  <p>K Diary는 사용자가 Google 계정으로 로그인하고 직접 허용한 권한만 사용합니다.</p>
   <table>
-    <tr><th>데이터</th><th>사용 목적</th></tr>
-    <tr><td>기본 프로필 (이름, 이메일, 프로필 사진)</td><td>로그인 및 사용자 확인</td></tr>
-    <tr><td>Google 캘린더 일정</td><td>다이어리 화면에 일정 표시, 사용자가 요청한 일정 추가·수정·삭제</td></tr>
-    <tr><td>Google 연락처 (이름, 이메일, 전화번호)</td><td>일정 참석자 지정 시 연락처 불러오기</td></tr>
+    <tr><th>데이터</th><th>요청 권한 (OAuth 범위)</th><th>사용 목적</th></tr>
+    <tr>
+      <td>기본 프로필<br>(이름, 이메일, 프로필 사진)</td>
+      <td>openid, email, profile</td>
+      <td>로그인 및 사용자 확인</td>
+    </tr>
+    <tr>
+      <td>Google 캘린더 일정</td>
+      <td><code>https://www.googleapis.com/auth/calendar.events</code><br>동의 화면 표시: "모든 캘린더의 일정 보기 및 수정"</td>
+      <td>일정을 K Diary와 양방향 동기화하기 위해 일정을 읽고, 사용자가 K Diary에서 추가·수정·삭제한 일정을 Google 캘린더에 반영합니다.</td>
+    </tr>
+    <tr>
+      <td>Google 연락처</td>
+      <td><code>https://www.googleapis.com/auth/contacts</code><br>동의 화면 표시: "연락처 보기, 수정, 다운로드, 영구 삭제"</td>
+      <td>연락처를 K Diary와 양방향 동기화하기 위해 연락처를 읽고, 사용자가 K Diary에서 추가·수정·삭제한 연락처를 Google 연락처에 반영합니다.</td>
+    </tr>
   </table>
 
   <div class="box" style="margin-top:20px;">
@@ -60,7 +73,8 @@
       <a href="https://developers.google.com/terms/api-services-user-data-policy" target="_blank" rel="noopener">Google API 서비스 사용자 데이터 정책</a>을 준수합니다.
     </p>
     <ul style="margin-bottom:0;">
-      <li>Google 사용자 데이터를 판매하거나 광고에 사용하지 않습니다.</li>
+      <li>Google 데이터의 수정·삭제는 사용자가 K Diary에서 직접 한 작업을 동기화할 때만 일어납니다.</li>
+      <li>Google 사용자 데이터를 판매하거나 광고에 사용하지 않으며, 제3자에게 전송하지 않습니다.</li>
       <li>Google 사용자 데이터를 AI·머신러닝 모델 학습에 사용하지 않습니다.</li>
       <li>K Diary는 이미지 생성 기능이 없으며, 동의하지 않은 사적인 이미지(NCII)를 만들거나 다루는 데 Google API를 사용하지 않습니다.</li>
     </ul>
@@ -74,15 +88,22 @@
   <h2 lang="en">About K Diary (English)</h2>
   <div class="en" lang="en">
     <p>
-      <strong>K Diary</strong> is a schedule app that shows your Google Calendar events as a daily diary
-      and lets you add, edit and delete events directly in the app. K Diary is developed by Striker Apps.
+      <strong>K Diary</strong> is a personal diary app that keeps your Google Calendar events and Google Contacts
+      in two-way sync with the app. K Diary is developed by Striker Apps.
       This page is the public homepage of K Diary and does not require sign-in.
     </p>
+    <ul>
+      <li><strong>Event sync:</strong> view your Google Calendar events as a daily diary; events you add or edit in K Diary are updated in Google Calendar, and changes made in Google Calendar appear in K Diary.</li>
+      <li><strong>Contact sync:</strong> view and manage your Google Contacts in K Diary, with additions and edits reflected on both sides.</li>
+      <li><strong>Deletion sync:</strong> when you delete an event or contact in K Diary, it is also deleted in Google, and items you delete in Google are removed from K Diary.</li>
+      <li><strong>Safeguard:</strong> K Diary never modifies or deletes events or contacts it has not synced.</li>
+    </ul>
     <p>
-      K Diary uses Google user data only to provide these features: your basic profile for sign-in,
-      your Google Calendar events to display and manage your schedule, and your Google Contacts
-      to choose event attendees. K Diary's use and transfer of information received from Google APIs
-      adheres to the <a href="https://developers.google.com/terms/api-services-user-data-policy" target="_blank" rel="noopener">Google API Services User Data Policy</a>,
+      K Diary requests the <code>calendar.events</code> scope ("See and edit events on all your calendars") and the
+      <code>contacts</code> scope ("See, edit, download, and permanently delete your contacts") only to provide this two-way sync.
+      Changes and deletions in your Google account happen only as a result of actions you take in K Diary.
+      K Diary's use and transfer of information received from Google APIs adheres to the
+      <a href="https://developers.google.com/terms/api-services-user-data-policy" target="_blank" rel="noopener">Google API Services User Data Policy</a>,
       including the Limited Use requirements. K Diary does not sell Google user data, does not use it for advertising
       or to train AI/ML models, and does not use Google APIs to create or handle non-consensual intimate imagery.
     </p>
