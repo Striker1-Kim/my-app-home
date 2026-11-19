@@ -1,29 +1,97 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="google-site-verification" content="ksBodUpfbVDUmyDkHqPi8kyS4dDVEO9HxJANt_OQoXw" />
-    <title>K Diary - 공식 안내</title>
-    <style>
-        body { font-family: -apple-system, BlinkMacSystemFont, "Malgun Gothic", sans-serif; line-height: 1.6; max-width: 800px; margin: 40px auto; padding: 0 20px; color: #333; }
-        h1, h2 { border-bottom: 1px solid #eee; padding-bottom: 8px; }
-        .box { background: #f9f9f9; padding: 16px; border-radius: 8px; margin-bottom: 24px; }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="google-site-verification" content="ksBodUpfbVDUmyDkHqPi8kyS4dDVEO9HxJANt_OQoXw" />
+  <meta name="description" content="K Diary는 Google 캘린더 일정을 한눈에 보고 관리할 수 있는 다이어리 앱입니다.">
+  <title>K Diary</title>
+  <style>
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Malgun Gothic", "Apple SD Gothic Neo", sans-serif; line-height: 1.7; max-width: 800px; margin: 0 auto; padding: 40px 20px 60px; color: #222; }
+    header { text-align: center; margin-bottom: 32px; }
+    header img { width: 96px; height: 96px; }
+    h1 { font-size: 2.2rem; margin: 12px 0 4px; }
+    .tagline { color: #555; font-size: 1.1rem; margin: 0; }
+    h2 { font-size: 1.3rem; border-bottom: 1px solid #e5e5e5; padding-bottom: 6px; margin-top: 36px; }
+    .box { background: #f5f7fb; border-radius: 8px; padding: 16px 20px; }
+    table { border-collapse: collapse; width: 100%; font-size: 0.95rem; }
+    th, td { border: 1px solid #ddd; padding: 8px 10px; text-align: left; vertical-align: top; }
+    th { background: #f0f0f0; }
+    .en { color: #555; font-size: 0.95rem; }
+    footer { margin-top: 48px; padding-top: 16px; border-top: 1px solid #e5e5e5; text-align: center; font-size: 0.95rem; color: #666; }
+    a { color: #1a5fd0; }
+  </style>
 </head>
-<footer style="margin-top:40px; text-align:center;">
-  <a href="privacy.html">개인정보처리방침</a>
-</footer>
 <body>
-    <h1>K Diary</h1>
-    <div class="box">
-        <p><strong>서비스 소개:</strong> 본 애플리케이션은 구글 캘린더 일정 동기화 및 업무 자동화 등을 제공하는 서비스입니다.</p>
-        <p><strong>문의 이메일:</strong> icefish2@gmail.com</p>
-    </div>
 
-    <h2>개인정보처리방침 (Privacy Policy)</h2>
-    <p><strong>1. 수집 및 이용하는 정보:</strong> 본 앱은 서비스 제공을 위해 사용자의 승인 하에 이메일 주소, 캘린더 일정 등 데이터에 접근합니다.</p>
-    <p><strong>2. 정보의 이용 목적:</strong> 수집된 정보는 오직 일정 등록 및 관리 기능 수행을 위해서만 사용되며, 제3자에게 제공하거나 판매하지 않습니다.</p>
-    <p><strong>3. 데이터 보관 및 파기:</strong> 사용자가 앱 연동을 해제하거나 서비스 이용을 중단할 경우 관련 데이터는 즉시 파기됩니다.</p>
+  <header>
+    <h1>K Diary</h1>
+    <p class="tagline">Google 캘린더 일정을 다이어리처럼 보고 관리하는 앱</p>
+  </header>
+
+  <h2>K Diary 소개</h2>
+  <p>
+    <strong>K Diary</strong>는 사용자의 Google 캘린더 일정을 날짜별 다이어리 형태로 보여 주고,
+    앱 안에서 일정을 바로 추가·수정·삭제할 수 있게 해 주는 일정 관리 앱입니다.
+    K Diary는 Striker Apps가 개발·운영합니다.
+  </p>
+  <p>이 페이지는 로그인 없이 누구나 볼 수 있는 K Diary의 공식 홈페이지입니다.</p>
+
+  <h2>주요 기능</h2>
+  <ul>
+    <li>Google 캘린더 일정을 날짜별 다이어리 화면으로 보기</li>
+    <li>앱에서 일정 추가·수정·삭제 (Google 캘린더에 바로 반영)</li>
+    <li>일정에 참석자를 지정할 때 Google 연락처에서 이름·이메일 불러오기</li>
+  </ul>
+
+  <h2>K Diary가 Google 데이터를 사용하는 방법</h2>
+  <p>K Diary는 사용자가 Google 계정으로 로그인하고 직접 허용한 권한만 사용하며, 각 데이터는 아래 목적으로만 사용합니다.</p>
+  <table>
+    <tr><th>데이터</th><th>사용 목적</th></tr>
+    <tr><td>기본 프로필 (이름, 이메일, 프로필 사진)</td><td>로그인 및 사용자 확인</td></tr>
+    <tr><td>Google 캘린더 일정</td><td>다이어리 화면에 일정 표시, 사용자가 요청한 일정 추가·수정·삭제</td></tr>
+    <tr><td>Google 연락처 (이름, 이메일, 전화번호)</td><td>일정 참석자 지정 시 연락처 불러오기</td></tr>
+  </table>
+
+  <div class="box" style="margin-top:20px;">
+    <p style="margin-top:0;">
+      K Diary가 Google API로부터 받은 정보를 사용하고 다른 앱으로 전송하는 방식은
+      제한된 사용(Limited Use) 요구사항을 포함한
+      <a href="https://developers.google.com/terms/api-services-user-data-policy" target="_blank" rel="noopener">Google API 서비스 사용자 데이터 정책</a>을 준수합니다.
+    </p>
+    <ul style="margin-bottom:0;">
+      <li>Google 사용자 데이터를 판매하거나 광고에 사용하지 않습니다.</li>
+      <li>Google 사용자 데이터를 AI·머신러닝 모델 학습에 사용하지 않습니다.</li>
+      <li>K Diary는 이미지 생성 기능이 없으며, 동의하지 않은 사적인 이미지(NCII)를 만들거나 다루는 데 Google API를 사용하지 않습니다.</li>
+    </ul>
+  </div>
+
+  <p>자세한 내용은 <a href="privacy.html">개인정보처리방침</a>을 확인해 주세요.</p>
+
+  <h2>문의</h2>
+  <p>개발자: Striker Apps · 이메일: <a href="mailto:icefish2@gmail.com">icefish2@gmail.com</a></p>
+
+  <h2 lang="en">About K Diary (English)</h2>
+  <div class="en" lang="en">
+    <p>
+      <strong>K Diary</strong> is a schedule app that shows your Google Calendar events as a daily diary
+      and lets you add, edit and delete events directly in the app. K Diary is developed by Striker Apps.
+      This page is the public homepage of K Diary and does not require sign-in.
+    </p>
+    <p>
+      K Diary uses Google user data only to provide these features: your basic profile for sign-in,
+      your Google Calendar events to display and manage your schedule, and your Google Contacts
+      to choose event attendees. K Diary's use and transfer of information received from Google APIs
+      adheres to the <a href="https://developers.google.com/terms/api-services-user-data-policy" target="_blank" rel="noopener">Google API Services User Data Policy</a>,
+      including the Limited Use requirements. K Diary does not sell Google user data, does not use it for advertising
+      or to train AI/ML models, and does not use Google APIs to create or handle non-consensual intimate imagery.
+    </p>
+    <p>See our <a href="privacy.html">Privacy Policy</a>. Contact: <a href="mailto:icefish2@gmail.com">icefish2@gmail.com</a></p>
+  </div>
+
+  <footer>
+    © 2026 Striker Apps · <a href="privacy.html">개인정보처리방침 (Privacy Policy)</a>
+  </footer>
+
 </body>
 </html>
